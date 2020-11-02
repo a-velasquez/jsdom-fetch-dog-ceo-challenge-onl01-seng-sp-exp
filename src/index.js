@@ -19,18 +19,18 @@ let breedList = []
 // added the event listener to the dropdown
 dropdown.addEventListener("change", event => {
   // got the selected value
-  const letter = event.target.value
+  const letter = event.target.value;
 
   // filter the array
-  const filteredBreeds = breedList.filter(function(breed) {
-    return breed.startsWith(letter)
+  const filteredBreeds = breedList.filter(function (breed) {
+    return breed.startsWith(letter);
   })
-  
+
   // (also, clear the list)
   dogList.innerHTML = ''
 
   // use that list to display
-  filteredBreeds.forEach(function(breed) {
+  filteredBreeds.forEach(function (breed) {
     renderBreed(breed)
   })
 
@@ -46,7 +46,7 @@ dropdown.addEventListener("change", event => {
   //     li.style.display = ""
   //   }
   // })
-})
+});
 
 // find the closest parent
 dogList.addEventListener("click", event => {
@@ -54,8 +54,8 @@ dogList.addEventListener("click", event => {
   if (event.target.matches("li")) {
     // run our DOM logic
     event.target.style.color = "red"
-  }
-})
+  };
+});
 
 function renderImage(imageUrl) {
   const img = document.createElement("img")
